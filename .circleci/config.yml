@@ -1,0 +1,18 @@
+version: 2
+jobs:
+  build:
+    working_directory: ~/gumball
+    docker:
+      - image: circleci/openjdk:8-jdk-browsers   
+    steps:
+      - checkout
+      - run: gradle build -x test 
+      - run: gradle test
+      - run: gradle shadowJar
+      - run: java -cp build/libs/gumball-all.jar gumball.Kid
+
+  
+  
+
+
+    
