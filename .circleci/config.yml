@@ -39,7 +39,6 @@ jobs:
             - ~/.m2
           key: v1-dependencies-{{ checksum "build.gradle" }}
         
-      # run gradle
       - run: gradle build -x test 
       - run: gradle test
       - run: gradle shadowJar
