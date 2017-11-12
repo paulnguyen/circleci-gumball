@@ -47,6 +47,7 @@ jobs:
           path: build/reports
       - store_artifacts:
           path: build/libs/gumball-all.jar
+          path: build/reports
 
 
   
